@@ -1,5 +1,15 @@
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+describe('Onbaording', () => {
+  it('visits url', () => {
+    cy.visit('salary.staging.onepipe.io/register')
+    cy.get('#first_name').type("Moses")
+    cy.get('#last_name').type("George")
+    cy.get('#email').type("moses@assurdly.com")
+    cy.get('#business_name').type("Assurdly Tester")
+    cy.get('#rc_number').type("123451")
+    cy.get('#business_type').select("Technology")
+    cy.get('#phone-input').type("8173854807")
+    cy.get('#password').type("Qwerty123@")
+    cy.get('#remember').click()
+    cy.get('.btn').click()
   })
 })
